@@ -1,0 +1,145 @@
+{
+  "company_info": {
+    "name": "Gul-e-Arsh Tour and Travels",
+    "phone": "+91 1234567890",
+    "email": "info@gulearshholidays.com",
+    "address": "Srinagar, Kashmir",
+    "coordinates": {
+      "lat": 34.0837,
+      "long": 74.7973
+    }
+  },
+  "hero_section": {
+    "title": "Your gateway to the paradise Kashmir",
+    "subtitle": "Embark on an adventure of a lifetime.",
+    "cta_text": "Explore Now",
+    "image": "/assets/images/hero_bg.jpg"
+  },
+  "stats": [
+    {
+      "id": 1,
+      "name": "Satisfied Tourists Globally",
+      "count": 876,
+      "icon": "Users"
+    },
+    {
+      "id": 2,
+      "name": "Hotels Connected with Us",
+      "count": 384,
+      "icon": "Hotel"
+    },
+    {
+      "id": 3,
+      "name": "Active Cabs in the Valley",
+      "count": 286,
+      "icon": "MapPin"
+    }
+  ],
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Gulmarg",
+      "image": "/assets/images/gulmarg_card.jpg",
+      "desc": "Experience the world's highest Gondola ride and ski slopes.",
+      "details": [
+        {
+          "title": "Day 1: Arrival",
+          "desc": "Check-in at the resort and evening walk.",
+          "image": "/assets/images/gulmarg_day1.jpg"
+        },
+        {
+          "title": "Day 2: Gondola Ride",
+          "desc": "Ride to Phase 1 and Phase 2 for snow activities.",
+          "image": "/assets/images/gulmarg_gondola.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Pahalgam",
+      "image": "/assets/images/pahalgam_card.jpg",
+      "desc": "The Valley of Shepherds, famous for its lush green meadows.",
+      "details": [
+        {
+          "title": "Attractions",
+          "desc": "Visit Betaab Valley and Aru Valley.",
+          "image": "/assets/images/betaab_valley.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Pahalgam",
+      "image": "/assets/images/pahalgam_card.jpg",
+      "desc": "The Valley of Shepherds, famous for its lush green meadows.",
+      "details": [
+        {
+          "title": "Attractions",
+          "desc": "Visit Betaab Valley and Aru Valley.",
+          "image": "/assets/images/betaab_valley.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Pahalgam",
+      "image": "/assets/images/pahalgam_card.jpg",
+      "desc": "The Valley of Shepherds, famous for its lush green meadows.",
+      "details": [
+        {
+          "title": "Attractions",
+          "desc": "Visit Betaab Valley and Aru Valley.",
+          "image": "/assets/images/betaab_valley.jpg"
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "id": 1,
+      "name": "Kashmir Honeymoon Special",
+      "image": "/assets/images/honeymoon_card.jpg",
+      "desc": "6 Days of romantic bliss in the mountains.",
+
+      "details": [
+        {
+          "title": "Day 1: Srinagar Landing",
+          "desc": "Pickup from airport and Shikara ride.",
+          "image": "/assets/images/shikara.jpg"
+        },
+        {
+          "title": "Day 2: Houseboat Stay",
+          "desc": "Romantic dinner and stay in a luxury houseboat.",
+          "image": "/assets/images/houseboat.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Winter Wonderland",
+      "image": "/assets/images/winter_card.jpg",
+      "desc": "A complete snow experience for families.",
+      "details": [
+        {
+          "title": "Day 1: Snow Park",
+          "desc": "Fun activities in the snow park.",
+          "image": "/assets/images/snow_park.jpg"
+        }
+      ]
+    }
+  ],
+  "team": [
+    {
+      "id": 1,
+      "name": "Sahil Gulzar Bhat",
+      "role": "Founder & CEO",
+      "image": "/assets/images/team1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Syed Arsalan Zahoor",
+      "role": "Travel Consultant",
+      "image": "/assets/images/team2.jpg"
+    }
+  ]
+}
