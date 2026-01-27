@@ -98,7 +98,7 @@ const Footer = ({ info }) => {
             </h3>
 
             <p className="mb-6 text-emerald-200">
-              Located at the heart of Srinagar, facing the beautiful Dal Lake.
+              {info.location_desc}
             </p>
 
             <a
