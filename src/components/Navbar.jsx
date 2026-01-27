@@ -23,7 +23,7 @@ const Navbar = ({ companyName }) => {
     <nav className={`fixed w-full z-40 transition-all duration-300 ${isScrolled ? 'bg-white/95 shadow-md py-4' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 text-emerald-900">
+        <a href="#home" className="flex items-center gap-2 text-emerald-900">
           <MountainSnow size={32} className={isScrolled ? 'text-emerald-900' : 'text-white'} />
           <span className={`text-xl font-bold font-serif ${isScrolled ? 'text-emerald-900' : 'text-white'}`}>
             {companyName}
@@ -35,7 +35,7 @@ const Navbar = ({ companyName }) => {
           {navLinks.map((link) => (
             <a 
               key={link.name} 
-              href={link.href}
+              href={link.href || '#'}
               className={`font-medium hover:text-amber-500 transition-colors ${isScrolled ? 'text-gray-700' : 'text-white/90'}`}
             >
               {link.name}
@@ -55,7 +55,7 @@ const Navbar = ({ companyName }) => {
           {navLinks.map((link) => (
             <a 
               key={link.name} 
-              href={link.href}
+              href={link.href || '#'}
               className="text-gray-700 font-medium hover:text-emerald-900"
               onClick={() => setIsMobileMenuOpen(false)}
             >
