@@ -4,6 +4,8 @@
     "phone": "+91 1234567890",
     "email": "info@gulearshholidays.com",
     "address": "Srinagar, Kashmir",
+    "tagline": "Experience the beauty of Kashmir with us!",
+    "location_desc": "Located at the heart of Srinagar, facing the beautiful Dal Lake.",
     "coordinates": {
       "lat": 34.0837,
       "long": 74.7973
