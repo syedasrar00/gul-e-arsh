@@ -46,6 +46,10 @@ export const getPopularPackages = () =>
 // ─── FAQs ────────────────────────────────────────────────
 export const getFaqs = () => data.faqs || [];
 
+// ─── Locations ───────────────────────────────────────────
+export const getLocations = () => data.locations || [];
+export const getLocationBySlug = (slug) => (data.locations || []).find((l) => l.slug === slug);
+
 // ─── Gallery ─────────────────────────────────────────────
 export const getGallery = () => data.gallery || [];
 
@@ -88,6 +92,7 @@ export default {
   getPackagesByCategory,
   getPopularPackages,
   getFaqs,
+  getLocations,
   getGallery,
   fetchPackages,
   fetchPackageById,

@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Packages from './pages/Packages';
 import PackageDetails from './pages/PackageDetails';
+import LocationsPage from './pages/Locations';
+import LocationDetails from './pages/LocationDetails';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
@@ -28,6 +30,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/package/:id" element={<PackageDetails />} />
+          <Route path="/locations" element={<LocationsPage />} />
+          <Route path="/locations/:slug" element={<LocationDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

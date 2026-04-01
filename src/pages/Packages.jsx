@@ -51,7 +51,7 @@ export default function Packages() {
     <>
       {/* Page Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden" id="packages-hero">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-light to-primary-dark" />
+        <div className="absolute inset-0 bg-linear-to-br from-dark via-dark-light to-primary-dark" />
         <div className="absolute inset-0 bg-[url('/images/hero-bg.png')] opacity-10 bg-cover bg-center" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
 

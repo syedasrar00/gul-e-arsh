@@ -1,6 +1,7 @@
 import HeroSection from '../components/HeroSection';
 import PackageList from '../components/PackageList';
 import ServiceList from '../components/ServiceList';
+import Locations from '../components/Locations';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
 import CTASection from '../components/CTASection';
@@ -27,7 +28,7 @@ function AboutPreview() {
                 alt="Kashmir landscape"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/50 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-primary-dark/50 to-transparent" />
             </div>
             {/* Floating stat card */}
             <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl shadow-black/10 animate-float">
@@ -69,7 +70,7 @@ function AboutPreview() {
 
             <Link
               to="/about"
-              className="group inline-flex items-center gap-3 bg-gradient-to-r from-primary to-primary-dark text-white px-7 py-3.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-3 bg-linear-to-r from-primary to-primary-dark text-white px-7 py-3.5 rounded-xl font-semibold hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5"
               id="about-read-more"
             >
               Learn More About Us
@@ -89,6 +90,7 @@ export default function Home() {
       <AboutPreview />
       <PackageList />
       <ServiceList />
+      <Locations />
       <WhyChooseUs />
       <Testimonials />
       <CTASection />

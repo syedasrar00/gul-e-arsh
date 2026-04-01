@@ -48,6 +48,21 @@ export function getPackageImage(imageKey) {
 }
 
 /**
+ * Maps location image keys to actual image paths.
+ */
+export function getLocationImage(imageKey) {
+  const imageMap = {
+    srinagar: '/images/srinagar.png',
+    gulmarg: '/images/gulmarg.png',
+    pahalgam: '/images/pahalgam.png',
+    sonmarg: '/images/sonmarg.png',
+    yusmarg: '/images/yusmarg.png',
+    doodhpathri: '/images/doodhpathri.png',
+  };
+  return imageMap[imageKey] || '/images/kashmir_paradise.png';
+}
+
+/**
  * Returns an icon component for given service/feature icon key
  */
 export function getIconForKey(key) {
