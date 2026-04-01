@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { getLocations } from '../services/dataService';
-import { useScrollAnimation, getLocationImage } from '../hooks/useUtils';
+import { useScrollAnimation } from '../hooks/useUtils';
 import { FiMapPin, FiCalendar, FiArrowRight } from 'react-icons/fi';
 
 export default function LocationsPreview() {
@@ -66,7 +66,7 @@ function LocationCard({ loc, index }) {
       {/* Image */}
       <div className="relative h-72">
         <img
-          src={getLocationImage(loc.image)}
+          src={loc.image}
           alt={loc.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           loading="lazy"

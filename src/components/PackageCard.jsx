@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { getPackageImage, useScrollAnimation } from '../hooks/useUtils';
+import { useScrollAnimation } from '../hooks/useUtils';
 import { FiMapPin, FiClock, FiArrowRight } from 'react-icons/fi';
 
 export default function PackageCard({ pkg, index = 0 }) {
@@ -17,7 +17,7 @@ export default function PackageCard({ pkg, index = 0 }) {
       {/* Image Container */}
       <div className="relative h-56 overflow-hidden">
         <img
-          src={getPackageImage(pkg.image)}
+          src={pkg.image}
           alt={pkg.title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           loading="lazy"

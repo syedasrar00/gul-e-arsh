@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getLocations } from '../services/dataService';
-import { useScrollAnimation, getLocationImage } from '../hooks/useUtils';
+import { useScrollAnimation } from '../hooks/useUtils';
 import { FiMapPin, FiCalendar, FiSearch, FiArrowRight, FiTriangle } from 'react-icons/fi';
 
 export default function LocationsPage() {
@@ -69,7 +69,7 @@ export default function LocationsPage() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filtered.map((loc, i) => (
-                <LocationFullCard key={loc.slug} loc={loc} index={i} />
+                <LocationFullCard key={loc.id} loc={loc} index={i} />
               ))}
             </div>
           )}
@@ -91,7 +91,7 @@ function LocationFullCard({ loc, index }) {
       {/* Image */}
       <div className="relative h-56 overflow-hidden">
         <img
-          src={getLocationImage(loc.image)}
+          src={loc.image}
           alt={loc.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           loading="lazy"
@@ -147,9 +147,9 @@ function LocationFullCard({ loc, index }) {
             {loc.distanceFromSrinagar} from Srinagar
           </div>
           <Link
-            to={`/locations/${loc.slug}`}
+            to={`/locations/${loc.id}`}
             className="group/btn inline-flex items-center gap-2 text-primary font-semibold text-sm hover:text-primary-dark transition-colors duration-200"
-            id={`location-detail-${loc.slug}`}
+            id={`location-detail-${loc.id}`}
           >
             Explore
             <FiArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />

@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
-import { getCompanyName, getCompanyTagline } from '../services/dataService';
+import { getCompanyName, getCompanyTagline, getSiteImages } from '../services/dataService';
 import { useScrollAnimation } from '../hooks/useUtils';
 import { FiArrowRight, FiPlay } from 'react-icons/fi';
 
 export default function HeroSection() {
   const companyName = getCompanyName();
   const tagline = getCompanyTagline();
+  const siteImages = getSiteImages();
   const [ref, isVisible] = useScrollAnimation();
 
   return (
@@ -17,7 +18,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-bg.png"
+          src={siteImages.hero}
           alt="Kashmir landscape"
           className="w-full h-full object-cover"
         />

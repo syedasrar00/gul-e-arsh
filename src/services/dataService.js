@@ -9,6 +9,9 @@ import data from '../data/data.json';
 // Simulate async loading for future API compatibility
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+// ─── Site Images ─────────────────────────────────────────
+export const getSiteImages = () => data.siteImages || {};
+
 // ─── Company ─────────────────────────────────────────────
 export const getCompanyInfo = () => data.company;
 export const getCompanyName = () => data.company.name;
@@ -48,7 +51,7 @@ export const getFaqs = () => data.faqs || [];
 
 // ─── Locations ───────────────────────────────────────────
 export const getLocations = () => data.locations || [];
-export const getLocationBySlug = (slug) => (data.locations || []).find((l) => l.slug === slug);
+export const getLocationById = (id) => (data.locations || []).find((l) => l.id === Number(id));
 
 // ─── Gallery ─────────────────────────────────────────────
 export const getGallery = () => data.gallery || [];

@@ -1,4 +1,12 @@
 {
+  "siteImages": {
+    "hero": "/images/hero-bg.png",
+    "about": "/images/about-bg.png",
+    "cta": "/images/about-bg.png",
+    "packagesHero": "/images/hero-bg.png",
+    "contactHero": "/images/hero-bg.png",
+    "fallback": "/images/kashmir_paradise.png"
+  },
   "company": {
     "name": "Gul-e-Arsh Tour & Travels",
     "tagline": "Where every journey begins with trust and ends with unforgettable memories.",
@@ -133,7 +141,7 @@
       "priceValue": 25000,
       "description": "Explore the mesmerizing beauty of Kashmir with this all-inclusive tour covering the three jewels of the Valley. From the iconic Dal Lake to the snow-capped peaks of Gulmarg, this package offers the perfect introduction to paradise on earth.",
       "shortDescription": "Experience the best of Srinagar, Gulmarg, and Pahalgam in one unforgettable journey through the Valley.",
-      "image": "kashmir_paradise",
+      "image": "/images/kashmir_paradise.png",
       "highlights": [
         "Shikara ride on Dal Lake at sunset",
         "Gulmarg Gondola — world's highest cable car",
@@ -162,7 +170,7 @@
       "priceValue": 35000,
       "description": "A romantic escape designed for couples, featuring luxury houseboat stays, candlelit dinners by the lake, private Shikara rides, and the most romantic spots in the Valley. Create memories that will last a lifetime.",
       "shortDescription": "A dreamy honeymoon experience featuring luxury stays, romantic Shikara rides, and snow-capped mountain views.",
-      "image": "honeymoon_kashmir",
+      "image": "/images/honeymoon_kashmir.png",
       "highlights": [
         "Private sunset Shikara ride for couples",
         "Luxury houseboat with candlelit dinner",
@@ -192,7 +200,7 @@
       "priceValue": 18000,
       "description": "Embark on one of India's most stunning treks — the Kashmir Great Lakes Trek. Traverse rugged mountain passes and witness seven turquoise alpine lakes surrounded by untouched meadows and snow-capped peaks.",
       "shortDescription": "Trek through seven pristine alpine lakes surrounded by snow-capped peaks — India's most beautiful trek.",
-      "image": "great_lakes_trek",
+      "image": "/images/great_lakes_trek.png",
       "highlights": [
         "Seven turquoise alpine lakes",
         "Mountain passes above 12,000 ft",
@@ -223,7 +231,7 @@
       "priceValue": 22000,
       "description": "An easy-paced, family-friendly tour designed to let every family member — from grandparents to toddlers — enjoy the beauty of Kashmir stress-free. Comfortable stays, kid-friendly activities, and zero hassle.",
       "shortDescription": "A relaxed, family-friendly Kashmir tour with comfortable stays, pony rides, and zero-hassle sightseeing.",
-      "image": "family_retreat",
+      "image": "/images/family_retreat.png",
       "highlights": [
         "Comfortable family-friendly accommodation",
         "Pony rides for kids in Pahalgam",
@@ -252,7 +260,7 @@
       "priceValue": 28000,
       "description": "Experience Gulmarg at its most magical — blanketed in pristine white snow. This winter-exclusive package includes skiing lessons, snowboarding, igloo building, and the thrill of riding the world's highest cable car above the clouds.",
       "shortDescription": "Ski, snowboard, and build igloos in the world's highest ski resort — Gulmarg's winter magic awaits.",
-      "image": "winter_gulmarg",
+      "image": "/images/winter_gulmarg.png",
       "highlights": [
         "Skiing & snowboarding lessons",
         "Gulmarg Gondola in winter",
@@ -280,7 +288,7 @@
       "priceValue": 45000,
       "description": "The definitive Kashmir experience covering every iconic destination and hidden gem. From the gardens of Srinagar to the glaciers of Sonmarg, from the meadows of Yusmarg to the valleys of Pahalgam — this is Kashmir in its entirety.",
       "shortDescription": "The complete Kashmir journey — every iconic destination and hidden gem in one grand tour.",
-      "image": "ultimate_kashmir",
+      "image": "/images/ultimate_kashmir.png",
       "highlights": [
         "All five major Kashmir destinations",
         "Luxury accommodation throughout",
@@ -306,7 +314,7 @@
   ],
   "locations": [
     {
-      "slug": "srinagar",
+      "id": 1,
       "name": "Srinagar",
       "subtitle": "The Heart of the Valley",
       "altitude": "1,585 m",
@@ -315,20 +323,20 @@
       "longDescription": "Srinagar, nestled in the heart of the Kashmir Valley at an altitude of 1,585 metres, is one of India's most romantic and historically rich cities. The city is built around the serene Dal Lake, which has been the defining icon of Kashmir for centuries. Houseboats crafted from walnut wood and intricately carved cedarwood line the shores, offering some of the most unique accommodation experiences in the world. The Mughal gardens — Shalimar Bagh, Nishat Bagh, and Chashme Shahi — are masterpieces of landscape architecture, built during the reign of emperors who called Kashmir paradise on earth. The old city is a labyrinth of narrow lanes filled with artisans crafting papier-mâché, pashmina, and hand-knotted carpets passed down through generations.",
       "highlights": ["Dal Lake & Shikara Rides", "Mughal Gardens", "Old City Markets", "Floating Vegetable Market"],
       "whatToSee": [
-        { "title": "Dal Lake", "description": "The iconic lake of Kashmir — sail on a Shikara, visit the floating gardens, and watch the sunrise paint the water gold." },
-        { "title": "Shalimar Bagh", "description": "Emperor Jehangir's garden of love, featuring tiered terraces, flowing water channels, and ancient chinar trees." },
-        { "title": "Nishat Bagh", "description": "The Garden of Pleasure — 12 terraced levels cascading down from the Zabarwan mountains to the lakeside." },
-        { "title": "Shankaracharya Temple", "description": "Perched atop a hill, offering a 360-degree panoramic view of Srinagar, the Dal Lake, and the surrounding mountains." },
-        { "title": "Old City Bazaars", "description": "Lanes filled with craftsmen making papier-mâché, pashmina shawls, hand-knotted carpets, and silver jewellery." },
-        { "title": "Hazratbal Shrine", "description": "A revered Muslim shrine on the banks of Dal Lake, known for its white marble architecture and spiritual atmosphere." }
+        { "title": "Dal Lake", "image": "/images/srinagar.png", "description": "The iconic lake of Kashmir — sail on a Shikara, visit the floating gardens, and watch the sunrise paint the water gold." },
+        { "title": "Shalimar Bagh", "image": "/images/about-bg.png", "description": "Emperor Jehangir's garden of love, featuring tiered terraces, flowing water channels, and ancient chinar trees." },
+        { "title": "Nishat Bagh", "image": "/images/ultimate_kashmir.png", "description": "The Garden of Pleasure — 12 terraced levels cascading down from the Zabarwan mountains to the lakeside." },
+        { "title": "Shankaracharya Temple", "image": "/images/kashmir_paradise.png", "description": "Perched atop a hill, offering a 360-degree panoramic view of Srinagar, the Dal Lake, and the surrounding mountains." },
+        { "title": "Old City Bazaars", "image": "/images/honeymoon_kashmir.png", "description": "Lanes filled with craftsmen making papier-mâché, pashmina shawls, hand-knotted carpets, and silver jewellery." },
+        { "title": "Hazratbal Shrine", "image": "/images/srinagar.png", "description": "A revered Muslim shrine on the banks of Dal Lake, known for its white marble architecture and spiritual atmosphere." }
       ],
       "bestFor": ["Couples", "Culture Lovers", "Photography", "Shopping"],
       "bestTime": "March – October",
-      "image": "srinagar",
+      "image": "/images/srinagar.png",
       "relatedPackageIds": [1, 2, 6]
     },
     {
-      "slug": "gulmarg",
+      "id": 2,
       "name": "Gulmarg",
       "subtitle": "The Meadow of Flowers",
       "altitude": "2,650 m",
@@ -337,20 +345,20 @@
       "longDescription": "Gulmarg, meaning 'Meadow of Flowers', sits at an elevation of 2,650 metres and is one of the Himalayas' most spectacular alpine destinations. In winter, it transforms into a pristine white wonderland, hosting Asia's highest and second longest cable car — the Gulmarg Gondola — which carries visitors to a height of 3,980 metres above sea level. The ski slopes here are world-class, attracting skiers from across the globe. In summer and spring, the meadow bursts into colour with wildflowers, making it a paradise for trekkers and nature lovers. The gentle slopes, cool weather, and surrounding peaks make it equally magical across all seasons.",
       "highlights": ["Gondola Cable Car", "Skiing & Snowboarding", "Alpather Lake Trek", "Meadow Walks"],
       "whatToSee": [
-        { "title": "Gulmarg Gondola", "description": "The world's highest operating cable car — ride to Phase 1 at 3,088m or Phase 2 at 3,980m for breathtaking Himalayan panoramas." },
-        { "title": "Ski Resort", "description": "Asia's premier ski destination with gentle beginner slopes and steep expert runs, fully equipped with rental shops and instructors." },
-        { "title": "Alpather Lake", "description": "A frozen alpine lake at 3,843 metres, accessible by a thrilling trek through snow — one of Kashmir's most beautiful hidden gems." },
-        { "title": "Bota Pathri", "description": "A hidden meadow 13 km from Gulmarg carpeted with wildflowers and ringed by snowy peaks — far fewer tourists than Gulmarg itself." },
-        { "title": "Golf Course", "description": "One of the world's highest golf courses at 2,650m, surrounded by pine forests and mountain views — a round here is unforgettable." },
-        { "title": "Maharani Temple", "description": "A hilltop Hindu temple with sweeping views of the Gulmarg bowl and the surrounding snow-capped Himalayan range." }
+        { "title": "Gulmarg Gondola", "image": "/images/gulmarg.png", "description": "The world's highest operating cable car — ride to Phase 1 at 3,088m or Phase 2 at 3,980m for breathtaking Himalayan panoramas." },
+        { "title": "Ski Resort", "image": "/images/winter_gulmarg.png", "description": "Asia's premier ski destination with gentle beginner slopes and steep expert runs, fully equipped with rental shops and instructors." },
+        { "title": "Alpather Lake", "image": "/images/great_lakes_trek.png", "description": "A frozen alpine lake at 3,843 metres, accessible by a thrilling trek through snow — one of Kashmir's most beautiful hidden gems." },
+        { "title": "Bota Pathri", "image": "/images/gulmarg.png", "description": "A hidden meadow 13 km from Gulmarg carpeted with wildflowers and ringed by snowy peaks — far fewer tourists than Gulmarg itself." },
+        { "title": "Golf Course", "image": "/images/ultimate_kashmir.png", "description": "One of the world's highest golf courses at 2,650m, surrounded by pine forests and mountain views — a round here is unforgettable." },
+        { "title": "Maharani Temple", "image": "/images/winter_gulmarg.png", "description": "A hilltop Hindu temple with sweeping views of the Gulmarg bowl and the surrounding snow-capped Himalayan range." }
       ],
       "bestFor": ["Adventure", "Skiing", "Couples", "Photography"],
       "bestTime": "Year-round",
-      "image": "gulmarg",
+      "image": "/images/gulmarg.png",
       "relatedPackageIds": [1, 2, 5, 6]
     },
     {
-      "slug": "pahalgam",
+      "id": 3,
       "name": "Pahalgam",
       "subtitle": "The Valley of Shepherds",
       "altitude": "2,130 m",
@@ -359,20 +367,20 @@
       "longDescription": "Pahalgam, the 'Valley of Shepherds', is set at 2,130 metres at the confluence of the streams flowing from Sheshnag Lake and the Lidder River. It was famously used as a Bollywood filming location and continues to enchant visitors with its cinematic beauty. The town itself is a base for trekkers heading to the Amarnath Shrine, and for those seeking to explore the dramatic side valleys of Betaab, Aru, and Chandanwari. Pony rides are a quintessential Pahalgam experience — climbing up to Baisaran, locally called 'Mini Switzerland', for views that feel almost too beautiful to be real.",
       "highlights": ["Betaab Valley", "Aru Valley", "Pony Rides to Baisaran", "Lidder River"],
       "whatToSee": [
-        { "title": "Betaab Valley", "description": "Named after the hit Bollywood film shot here — a breathtaking valley of green meadows, streams, and towering mountains." },
-        { "title": "Aru Valley", "description": "A serene side-valley 12 km from Pahalgam — a favourite base for trekkers heading to Kolahoi Glacier and Tarsar Lake." },
-        { "title": "Baisaran (Mini Switzerland)", "description": "A flat meadow surrounded by dense pine forests and snow-capped peaks — accessible by pony ride from Pahalgam village." },
-        { "title": "Chandanwari", "description": "The starting point of the annual Amarnath Yatra — a spectacular snow-covered terrain with a famous snowbridge." },
-        { "title": "Lidder River", "description": "Walk or sit beside this swift glacial river running through the heart of Pahalgam — perfect for trout fishing and river-gazing." },
-        { "title": "Mamaleshwara Temple", "description": "A small ancient Shiva temple on the banks of the Lidder, one of the oldest temples in Kashmir dating back to the 12th century." }
+        { "title": "Betaab Valley", "image": "/images/pahalgam.png", "description": "Named after the hit Bollywood film shot here — a breathtaking valley of green meadows, streams, and towering mountains." },
+        { "title": "Aru Valley", "image": "/images/great_lakes_trek.png", "description": "A serene side-valley 12 km from Pahalgam — a favourite base for trekkers heading to Kolahoi Glacier and Tarsar Lake." },
+        { "title": "Baisaran (Mini Switzerland)", "image": "/images/pahalgam.png", "description": "A flat meadow surrounded by dense pine forests and snow-capped peaks — accessible by pony ride from Pahalgam village." },
+        { "title": "Chandanwari", "image": "/images/sonmarg.png", "description": "The starting point of the annual Amarnath Yatra — a spectacular snow-covered terrain with a famous snowbridge." },
+        { "title": "Lidder River", "image": "/images/family_retreat.png", "description": "Walk or sit beside this swift glacial river running through the heart of Pahalgam — perfect for trout fishing and river-gazing." },
+        { "title": "Mamaleshwara Temple", "image": "/images/kashmir_paradise.png", "description": "A small ancient Shiva temple on the banks of the Lidder, one of the oldest temples in Kashmir dating back to the 12th century." }
       ],
       "bestFor": ["Families", "Couples", "Trekking", "Bollywood Fans"],
       "bestTime": "April – October",
-      "image": "pahalgam",
+      "image": "/images/pahalgam.png",
       "relatedPackageIds": [1, 2, 3, 4, 6]
     },
     {
-      "slug": "sonmarg",
+      "id": 4,
       "name": "Sonmarg",
       "subtitle": "The Meadow of Gold",
       "altitude": "2,730 m",
@@ -381,20 +389,20 @@
       "longDescription": "Sonmarg, or 'Meadow of Gold', earns its poetic name from the golden hues that wash over its vast alpine meadow in autumn. Situated at 2,730 metres, it sits on the Srinagar–Leh highway and serves as the last major town before the dramatic high-altitude passes that lead into Ladakh. The Thajiwas Glacier, a short trek from the main meadow, is a year-round snow destination that delights visitors with snow activities even in late summer. The Sindh River, which originates near Sonmarg, is a favourite for trout fishing, while Vishansar and Krishansar Lakes — part of the Great Lakes Trek — begin their journey from this base.",
       "highlights": ["Thajiwas Glacier", "Zero Point", "Alpine Meadows", "River Trout Fishing"],
       "whatToSee": [
-        { "title": "Thajiwas Glacier", "description": "A stunning glacier accessible by pony or a short trek — snow activities here are possible even in July and August." },
-        { "title": "Zero Point", "description": "The point where the road ends and only snow begins — a dramatic, icy landscape at over 3,500 metres elevation." },
-        { "title": "Sindh River", "description": "A sparkling glacial river ideal for trout fishing, riverside picnics, and quiet reflection amidst majestic mountain scenery." },
-        { "title": "Vishansar Lake", "description": "A stunning turquoise alpine lake at 3,710 metres, reached by trekking through the Great Lakes trail from Sonmarg." },
-        { "title": "Baltal Valley", "description": "A dramatic valley serving as the base camp for the Amarnath Yatra — breathtaking mountain scenery and a roaring river." },
-        { "title": "Nichnai Pass", "description": "A high mountain pass above 4,000 metres offering spectacular views — accessible to trekkers on the Great Lakes circuit." }
+        { "title": "Thajiwas Glacier", "image": "/images/sonmarg.png", "description": "A stunning glacier accessible by pony or a short trek — snow activities here are possible even in July and August." },
+        { "title": "Zero Point", "image": "/images/winter_gulmarg.png", "description": "The point where the road ends and only snow begins — a dramatic, icy landscape at over 3,500 metres elevation." },
+        { "title": "Sindh River", "image": "/images/family_retreat.png", "description": "A sparkling glacial river ideal for trout fishing, riverside picnics, and quiet reflection amidst majestic mountain scenery." },
+        { "title": "Vishansar Lake", "image": "/images/great_lakes_trek.png", "description": "A stunning turquoise alpine lake at 3,710 metres, reached by trekking through the Great Lakes trail from Sonmarg." },
+        { "title": "Baltal Valley", "image": "/images/sonmarg.png", "description": "A dramatic valley serving as the base camp for the Amarnath Yatra — breathtaking mountain scenery and a roaring river." },
+        { "title": "Nichnai Pass", "image": "/images/great_lakes_trek.png", "description": "A high mountain pass above 4,000 metres offering spectacular views — accessible to trekkers on the Great Lakes circuit." }
       ],
       "bestFor": ["Trekking", "Adventure", "Photography", "Nature Lovers"],
       "bestTime": "May – September",
-      "image": "sonmarg",
+      "image": "/images/sonmarg.png",
       "relatedPackageIds": [2, 3, 6]
     },
     {
-      "slug": "yusmarg",
+      "id": 5,
       "name": "Yusmarg",
       "subtitle": "The Untouched Paradise",
       "altitude": "2,400 m",
@@ -403,20 +411,20 @@
       "longDescription": "Yusmarg, sitting at 2,400 metres, is one of Kashmir's best-kept secrets — a vast, pristine meadow where the tumult of modern tourism feels a world away. The Doodhganga River, its crystal-clear waters milky from glacial melt, flows through the valley creating a scene of impossible beauty. The nearby Charar-i-Sharief shrine, one of Kashmir's most important Sufi pilgrimage sites, adds a spiritual dimension to a visit here. Unlike Gulmarg or Pahalgam, Yusmarg remains genuinely undiscovered — you may share a meadow with nothing but grazing horses and the wind in the pines.",
       "highlights": ["Doodhganga River", "Horse Riding", "Charar-i-Sharief Shrine", "Pristine Meadows"],
       "whatToSee": [
-        { "title": "Doodhganga River", "description": "A glacially-fed river of milky blue-white water rushing through the valley floor — one of Kashmir's most photogenic waterways." },
-        { "title": "Charar-i-Sharief", "description": "A revered Sufi shrine, 13 km away, dedicated to Sheikh Noor-ud-Din Wali — Kashmir's patron saint — set in a hilltop village." },
-        { "title": "Frozen Lakes", "description": "Several small alpine lakes near Yusmarg remain frozen well into June — magical to walk around in the spring snowmelt season." },
-        { "title": "Nilnag Lake", "description": "A pristine lake surrounded by dense deodar forest accessible by horse — a serene picnic spot with mountain reflections." },
-        { "title": "Sunset Meadow Views", "description": "The open meadows offer unobstructed sunset views over the Pir Panjal range — a photographer's dream in golden hour." },
-        { "title": "Village Homestays", "description": "A rare opportunity to stay in a Kashmiri shepherd's village, sharing authentic cuisine and culture away from hotel tourism." }
+        { "title": "Doodhganga River", "image": "/images/yusmarg.png", "description": "A glacially-fed river of milky blue-white water rushing through the valley floor — one of Kashmir's most photogenic waterways." },
+        { "title": "Charar-i-Sharief", "image": "/images/about-bg.png", "description": "A revered Sufi shrine, 13 km away, dedicated to Sheikh Noor-ud-Din Wali — Kashmir's patron saint — set in a hilltop village." },
+        { "title": "Frozen Lakes", "image": "/images/great_lakes_trek.png", "description": "Several small alpine lakes near Yusmarg remain frozen well into June — magical to walk around in the spring snowmelt season." },
+        { "title": "Nilnag Lake", "image": "/images/pahalgam.png", "description": "A pristine lake surrounded by dense deodar forest accessible by horse — a serene picnic spot with mountain reflections." },
+        { "title": "Sunset Meadow Views", "image": "/images/yusmarg.png", "description": "The open meadows offer unobstructed sunset views over the Pir Panjal range — a photographer's dream in golden hour." },
+        { "title": "Village Homestays", "image": "/images/family_retreat.png", "description": "A rare opportunity to stay in a Kashmiri shepherd's village, sharing authentic cuisine and culture away from hotel tourism." }
       ],
       "bestFor": ["Off-beat Travel", "Photography", "Couples", "Nature Lovers"],
       "bestTime": "April – September",
-      "image": "yusmarg",
+      "image": "/images/yusmarg.png",
       "relatedPackageIds": [6]
     },
     {
-      "slug": "doodhpathri",
+      "id": 6,
       "name": "Doodhpathri",
       "subtitle": "The Valley of Milk",
       "altitude": "2,730 m",
@@ -425,16 +433,16 @@
       "longDescription": "Doodhpathri, or 'Valley of Milk', takes its name from the milky white, frothy streams that tumble through its rolling green meadows. Situated at an elevation of 2,730 metres in the Budgam district, it remains one of the least commercialised destinations in Kashmir — a dream for those seeking Kashmir without the crowds. The vast expanse of grassland, framed by dense forests of fir and pine, is a favourite grazing ground for Gujjar and Bakarwal nomadic shepherds. A day trip from Srinagar, Doodhpathri rewards visitors with wildflower carpets in spring and a golden silence broken only by the rush of glacial streams.",
       "highlights": ["Milky White Streams", "Rolling Grasslands", "Pine Forest Walks", "Picnic & Camping"],
       "whatToSee": [
-        { "title": "Glacial Meadows", "description": "Vast open grasslands at 2,730 metres, carpeted with wildflowers in spring and gold in autumn — completely unspoiled." },
-        { "title": "Milky Streams", "description": "The namesake frothy white streams fed by glacial meltwater rush through the meadows — perfect for a gentle wade in summer." },
-        { "title": "Tosa Maidan", "description": "A sprawling high-altitude meadow 15 km further into the mountains — one of Asia's largest alpine meadows, reached only on foot." },
-        { "title": "Pine Forest Trails", "description": "Dense forests of Himalayan fir and blue pine surround the meadow — peaceful walking trails through ancient woodland." },
-        { "title": "Shepherd Camps", "description": "Interact with Gujjar nomadic shepherds who bring their flocks here in summer — a window into a vanishing way of life." },
-        { "title": "Stargazing", "description": "With virtually zero light pollution, Doodhpathri offers some of the most spectacular night sky views anywhere in Kashmir." }
+        { "title": "Glacial Meadows", "image": "/images/doodhpathri.png", "description": "Vast open grasslands at 2,730 metres, carpeted with wildflowers in spring and gold in autumn — completely unspoiled." },
+        { "title": "Milky Streams", "image": "/images/doodhpathri.png", "description": "The namesake frothy white streams fed by glacial meltwater rush through the meadows — perfect for a gentle wade in summer." },
+        { "title": "Tosa Maidan", "image": "/images/pahalgam.png", "description": "A sprawling high-altitude meadow 15 km further into the mountains — one of Asia's largest alpine meadows, reached only on foot." },
+        { "title": "Pine Forest Trails", "image": "/images/ultimate_kashmir.png", "description": "Dense forests of Himalayan fir and blue pine surround the meadow — peaceful walking trails through ancient woodland." },
+        { "title": "Shepherd Camps", "image": "/images/family_retreat.png", "description": "Interact with Gujjar nomadic shepherds who bring their flocks here in summer — a window into a vanishing way of life." },
+        { "title": "Stargazing", "image": "/images/doodhpathri.png", "description": "With virtually zero light pollution, Doodhpathri offers some of the most spectacular night sky views anywhere in Kashmir." }
       ],
       "bestFor": ["Off-beat Travel", "Camping", "Photography", "Solitude Seekers"],
       "bestTime": "April – October",
-      "image": "doodhpathri",
+      "image": "/images/doodhpathri.png",
       "relatedPackageIds": [6]
     }
   ],

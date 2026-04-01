@@ -58,12 +58,8 @@ export default function Navbar() {
               className="flex items-center gap-3 group"
               id="navbar-logo"
             >
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-lg transition-all duration-300 group-hover:scale-110 ${
-                showSolid
-                  ? 'bg-gradient-to-br from-primary to-primary-dark shadow-md'
-                  : 'bg-white/20 backdrop-blur-sm border border-white/30'
-              }`}>
-                G
+              <div >
+                <img src="logo.png" alt="Logo" className="w-full h-full object-cover scale-150" />
               </div>
               <div>
                 <h1 className={`text-lg font-bold leading-tight transition-colors duration-300 ${

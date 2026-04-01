@@ -31,7 +31,7 @@ function App() {
           <Route path="/packages" element={<Packages />} />
           <Route path="/package/:id" element={<PackageDetails />} />
           <Route path="/locations" element={<LocationsPage />} />
-          <Route path="/locations/:slug" element={<LocationDetails />} />
+          <Route path="/locations/:id" element={<LocationDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

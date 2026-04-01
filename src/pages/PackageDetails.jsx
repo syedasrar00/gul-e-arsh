@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { getPackageById, getPhone, getEmail } from '../services/dataService';
-import { getPackageImage, useScrollAnimation } from '../hooks/useUtils';
+import { useScrollAnimation } from '../hooks/useUtils';
 import {
   FiMapPin, FiClock, FiArrowLeft, FiCheck, FiPhone, FiMail, FiChevronRight,
 } from 'react-icons/fi';
@@ -38,7 +38,7 @@ export default function PackageDetails() {
       {/* Hero Banner */}
       <section className="relative h-[50vh] min-h-[400px] overflow-hidden" id="package-detail-hero">
         <img
-          src={getPackageImage(pkg.image)}
+          src={pkg.image}
           alt={pkg.title}
           className="w-full h-full object-cover"
         />

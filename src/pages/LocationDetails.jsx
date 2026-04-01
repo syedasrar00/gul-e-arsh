@@ -1,22 +1,38 @@
-import { useParams, Link } from 'react-router-dom';
-import { getLocationBySlug, getPackageById } from '../services/dataService';
-import { getLocationImage, getPackageImage } from '../hooks/useUtils';
-import { FiArrowLeft, FiMapPin, FiCalendar, FiTriangle, FiCheck, FiPhone, FiMessageSquare } from 'react-icons/fi';
-import { getPhone, getContactInfo } from '../services/dataService';
+import { useParams, Link } from "react-router-dom";
+import {
+  getLocationById,
+  getPackageById,
+  getPhone,
+} from "../services/dataService";
+import {
+  FiArrowLeft,
+  FiMapPin,
+  FiTriangle,
+  FiCalendar,
+  FiCheck,
+  FiMessageSquare,
+  FiPhone,
+} from "react-icons/fi";
 
 export default function LocationDetails() {
-  const { slug } = useParams();
-  const location = getLocationBySlug(slug);
+  const { id } = useParams();
+  const location = getLocationById(id);
   const phone = getPhone();
-  const contact = getContactInfo();
 
   if (!location) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center pt-24 px-4">
         <p className="text-6xl mb-4">🏔️</p>
-        <h2 className="text-2xl font-bold text-dark mb-2">Destination not found</h2>
-        <p className="text-gray-500 mb-6">This destination doesn't exist in our list.</p>
-        <Link to="/locations" className="btn-primary px-6 py-3 rounded-xl bg-primary text-white font-semibold hover:bg-primary-dark transition-colors">
+        <h2 className="text-2xl font-bold text-dark mb-2">
+          Destination not found
+        </h2>
+        <p className="text-gray-500 mb-6">
+          This destination doesn't exist in our list.
+        </p>
+        <Link
+          to="/locations"
+          className="btn-primary px-6 py-3 rounded-xl bg-primary text-white font-semibold hover:bg-primary-dark transition-colors"
+        >
           View All Locations
         </Link>
       </div>
@@ -30,9 +46,12 @@ export default function LocationDetails() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative h-[60vh] min-h-[420px] overflow-hidden" id="location-detail-hero">
+      <section
+        className="relative h-[60vh] min-h-[420px] overflow-hidden"
+        id="location-detail-hero"
+      >
         <img
-          src={getLocationImage(location.image)}
+          src={location.image}
           alt={location.name}
           className="w-full h-full object-cover scale-105"
         />
@@ -65,15 +84,21 @@ export default function LocationDetails() {
             <div className="flex flex-wrap gap-4 mt-5">
               <div className="glass px-4 py-2 rounded-xl flex items-center gap-2">
                 <FiTriangle className="w-4 h-4 text-primary-light" />
-                <span className="text-white text-sm font-semibold">{location.altitude}</span>
+                <span className="text-white text-sm font-semibold">
+                  {location.altitude}
+                </span>
               </div>
               <div className="glass px-4 py-2 rounded-xl flex items-center gap-2">
                 <FiCalendar className="w-4 h-4 text-primary-light" />
-                <span className="text-white text-sm font-semibold">{location.bestTime}</span>
+                <span className="text-white text-sm font-semibold">
+                  {location.bestTime}
+                </span>
               </div>
               <div className="glass px-4 py-2 rounded-xl flex items-center gap-2">
                 <FiMapPin className="w-4 h-4 text-primary-light" />
-                <span className="text-white text-sm font-semibold">{location.distanceFromSrinagar} from Srinagar</span>
+                <span className="text-white text-sm font-semibold">
+                  {location.distanceFromSrinagar} from Srinagar
+                </span>
               </div>
             </div>
           </div>
@@ -84,25 +109,34 @@ export default function LocationDetails() {
       <section className="py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-
             {/* ── Left: content ── */}
             <div className="lg:col-span-2 space-y-12">
-
               {/* About */}
               <div className="bg-white rounded-3xl p-8 shadow-sm">
-                <h2 className="text-2xl font-bold text-dark mb-4">About {location.name}</h2>
-                <p className="text-gray-600 leading-relaxed text-base mb-4">{location.description}</p>
+                <h2 className="text-2xl font-bold text-dark mb-4">
+                  About {location.name}
+                </h2>
+                <p className="text-gray-600 leading-relaxed text-base mb-4">
+                  {location.description}
+                </p>
                 {location.longDescription && (
-                  <p className="text-gray-500 leading-relaxed text-sm">{location.longDescription}</p>
+                  <p className="text-gray-500 leading-relaxed text-sm">
+                    {location.longDescription}
+                  </p>
                 )}
               </div>
 
               {/* Highlights */}
               <div className="bg-white rounded-3xl p-8 shadow-sm">
-                <h2 className="text-2xl font-bold text-dark mb-6">Top Highlights</h2>
+                <h2 className="text-2xl font-bold text-dark mb-6">
+                  Top Highlights
+                </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {location.highlights.map((h, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 bg-primary/5 rounded-xl">
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 p-3 bg-primary/5 rounded-xl"
+                    >
                       <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
                         <FiCheck className="w-3.5 h-3.5 text-white" />
                       </div>
@@ -115,15 +149,55 @@ export default function LocationDetails() {
               {/* What to See */}
               {location.whatToSee && location.whatToSee.length > 0 && (
                 <div className="bg-white rounded-3xl p-8 shadow-sm">
-                  <h2 className="text-2xl font-bold text-dark mb-6">What to See & Do</h2>
+                  <h2 className="text-2xl font-bold text-dark mb-6">
+                    What to See & Do
+                  </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {location.whatToSee.map((item, i) => (
-                      <div key={i} className="group p-5 border border-gray-100 rounded-2xl hover:border-primary/30 hover:shadow-md hover:shadow-primary/5 transition-all duration-300">
-                        <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors duration-300">
-                          <span className="text-primary font-bold text-sm">{i + 1}</span>
+                      <div
+                        key={i}
+                        className="group rounded-2xl overflow-hidden border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/8 transition-all duration-300"
+                      >
+                        {/* Image */}
+                        {item.image && (
+                          <div className="relative h-36 overflow-hidden">
+                            <img
+                              src={item.image}
+                              alt={item.title}
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
+                            <div className="absolute bottom-2 left-3">
+                              <span className="glass text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg">
+                                {item.title}
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        {/* Text */}
+                        <div className="p-4">
+                          {!item.image && (
+                            <div className="flex items-center gap-2 mb-2">
+                              <div className="w-7 h-7 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <span className="text-primary font-bold text-xs">
+                                  {i + 1}
+                                </span>
+                              </div>
+                              <h4 className="font-bold text-dark text-sm">
+                                {item.title}
+                              </h4>
+                            </div>
+                          )}
+                          {item.image && (
+                            <h4 className="font-bold text-dark text-sm mb-1">
+                              {item.title}
+                            </h4>
+                          )}
+                          <p className="text-gray-500 text-xs leading-relaxed">
+                            {item.description}
+                          </p>
                         </div>
-                        <h4 className="font-bold text-dark text-sm mb-1.5">{item.title}</h4>
-                        <p className="text-gray-500 text-xs leading-relaxed">{item.description}</p>
                       </div>
                     ))}
                   </div>
@@ -133,10 +207,15 @@ export default function LocationDetails() {
               {/* Best For */}
               {location.bestFor && (
                 <div className="bg-white rounded-3xl p-8 shadow-sm">
-                  <h2 className="text-2xl font-bold text-dark mb-5">Best For</h2>
+                  <h2 className="text-2xl font-bold text-dark mb-5">
+                    Best For
+                  </h2>
                   <div className="flex flex-wrap gap-3">
                     {location.bestFor.map((tag, i) => (
-                      <span key={i} className="px-5 py-2.5 bg-primary/8 text-primary font-semibold text-sm rounded-xl border border-primary/10">
+                      <span
+                        key={i}
+                        className="px-5 py-2.5 bg-primary/8 text-primary font-semibold text-sm rounded-xl border border-primary/10"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -148,7 +227,8 @@ export default function LocationDetails() {
               {relatedPackages.length > 0 && (
                 <div>
                   <h2 className="text-2xl font-bold text-dark mb-6">
-                    Packages Visiting <span className="gradient-text">{location.name}</span>
+                    Packages Visiting{" "}
+                    <span className="gradient-text">{location.name}</span>
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {relatedPackages.map((pkg) => (
@@ -159,14 +239,16 @@ export default function LocationDetails() {
                       >
                         <div className="relative h-36 overflow-hidden">
                           <img
-                            src={getPackageImage(pkg.image)}
+                            src={pkg.image}
                             alt={pkg.title}
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             loading="lazy"
                           />
                           <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
                           <div className="absolute bottom-3 left-3 right-3">
-                            <p className="text-white font-bold text-sm">{pkg.title}</p>
+                            <p className="text-white font-bold text-sm">
+                              {pkg.title}
+                            </p>
                           </div>
                           <div className="absolute top-2 right-2 bg-primary text-white text-xs font-bold px-2.5 py-1 rounded-lg">
                             {pkg.price}
@@ -174,8 +256,12 @@ export default function LocationDetails() {
                         </div>
                         <div className="p-4 flex items-center justify-between">
                           <div>
-                            <p className="text-xs text-gray-400">{pkg.duration}</p>
-                            <p className="text-xs text-gray-400">{pkg.location}</p>
+                            <p className="text-xs text-gray-400">
+                              {pkg.duration}
+                            </p>
+                            <p className="text-xs text-gray-400">
+                              {pkg.location}
+                            </p>
                           </div>
                           <span className="text-primary text-xs font-semibold group-hover:translate-x-1 transition-transform duration-200 flex items-center gap-1">
                             View <FiArrowLeft className="w-3 h-3 rotate-180" />
@@ -193,15 +279,19 @@ export default function LocationDetails() {
               <div className="sticky top-28 space-y-5">
                 {/* Enquiry card */}
                 <div className="bg-white rounded-3xl p-6 shadow-md border border-gray-100">
-                  <h3 className="text-lg font-bold text-dark mb-1">Plan a Trip to {location.name}</h3>
-                  <p className="text-gray-500 text-sm mb-6">Get a personalised itinerary — free and no obligation</p>
+                  <h3 className="text-lg font-bold text-dark mb-1">
+                    Plan a Trip to {location.name}
+                  </h3>
+                  <p className="text-gray-500 text-sm mb-6">
+                    Get a personalised itinerary — free and no obligation
+                  </p>
 
                   <a
-                    href={`https://wa.me/${phone.replace(/\D/g, '')}?text=Hi! I'm interested in visiting ${location.name}. Can you help me plan a trip?`}
+                    href={`https://wa.me/${phone.replace(/\D/g, "")}?text=Hi! I'm interested in visiting ${location.name}. Can you help me plan a trip?`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white px-5 py-3.5 rounded-xl font-semibold mb-3 hover:bg-[#128C7E] transition-colors duration-200"
-                    id={`location-whatsapp-${slug}`}
+                    id={`location-whatsapp-${id}`}
                   >
                     <FiMessageSquare className="w-5 h-5" />
                     Enquire on WhatsApp
@@ -209,7 +299,7 @@ export default function LocationDetails() {
                   <a
                     href={`tel:${phone}`}
                     className="flex items-center justify-center gap-2 w-full bg-primary text-white px-5 py-3.5 rounded-xl font-semibold hover:bg-primary-dark transition-colors duration-200"
-                    id={`location-call-${slug}`}
+                    id={`location-call-${id}`}
                   >
                     <FiPhone className="w-5 h-5" />
                     Call Us Now
@@ -218,11 +308,25 @@ export default function LocationDetails() {
 
                 {/* Quick info card */}
                 <div className="bg-white rounded-3xl p-6 shadow-md border border-gray-100">
-                  <h3 className="text-base font-bold text-dark mb-4">Quick Info</h3>
+                  <h3 className="text-base font-bold text-dark mb-4">
+                    Quick Info
+                  </h3>
                   <div className="space-y-3">
-                    <InfoRow label="Altitude" value={location.altitude} icon={<FiTriangle />} />
-                    <InfoRow label="Best Time" value={location.bestTime} icon={<FiCalendar />} />
-                    <InfoRow label="Distance" value={location.distanceFromSrinagar + ' from Srinagar'} icon={<FiMapPin />} />
+                    <InfoRow
+                      label="Altitude"
+                      value={location.altitude}
+                      icon={<FiTriangle />}
+                    />
+                    <InfoRow
+                      label="Best Time"
+                      value={location.bestTime}
+                      icon={<FiCalendar />}
+                    />
+                    <InfoRow
+                      label="Distance"
+                      value={location.distanceFromSrinagar + " from Srinagar"}
+                      icon={<FiMapPin />}
+                    />
                   </div>
                 </div>
 
