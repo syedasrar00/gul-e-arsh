@@ -1,71 +1,211 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, MountainSnow } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { getCompanyName, getPhone } from '../services/dataService';
+import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
 
-const Navbar = ({ companyName }) => {
+const navLinks = [
+  { to: '/', label: 'Home' },
+  { to: '/packages', label: 'Packages' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' },
+];
+
+export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const companyName = getCompanyName();
+  const phone = getPhone();
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Destinations', href: '#destinations' },
-    { name: 'Packages', href: '#packages' },
-    { name: 'Team', href: '#team' },
-    { name: 'Contact', href: '#contact' },
-  ];
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  // Disable body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isMobileMenuOpen]);
 
   return (
-    <nav className={`fixed w-full z-40 transition-all duration-300 ${isScrolled ? 'bg-white/95 shadow-md py-4' : 'bg-transparent py-6'}`}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 text-emerald-900">
-          <MountainSnow size={32} className={isScrolled ? 'text-emerald-900' : 'text-white'} />
-          <span className={`text-xl font-bold font-serif ${isScrolled ? 'text-emerald-900' : 'text-white'}`}>
-            {companyName}
-          </span>
-        </a>
+    <header
+      id="main-navbar"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? 'bg-white/95 backdrop-blur-lg shadow-lg shadow-black/5 py-2'
+          : 'bg-transparent py-4'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link
+            to="/"
+            className="flex items-center gap-3 group"
+            id="navbar-logo"
+          >
+            <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-lg transition-all duration-300 group-hover:scale-110 ${
+              isScrolled
+                ? 'bg-gradient-to-br from-primary to-primary-dark shadow-md'
+                : 'bg-white/20 backdrop-blur-sm border border-white/30'
+            }`}>
+              G
+            </div>
+            <div>
+              <h1 className={`text-lg font-bold leading-tight transition-colors duration-300 ${
+                isScrolled ? 'text-dark' : 'text-white'
+              }`}>
+                {companyName.split(' ').slice(0, 1).join(' ')}
+              </h1>
+              <p className={`text-[10px] font-medium tracking-wider uppercase transition-colors duration-300 ${
+                isScrolled ? 'text-primary' : 'text-white/80'
+              }`}>
+                Tour & Travels
+              </p>
+            </div>
+          </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href || '#'}
-              className={`font-medium hover:text-amber-500 transition-colors ${isScrolled ? 'text-gray-700' : 'text-white/90'}`}
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-1" id="desktop-nav">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  `relative px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
+                    isActive
+                      ? isScrolled
+                        ? 'text-primary bg-primary/10'
+                        : 'text-white bg-white/20 backdrop-blur-sm'
+                      : isScrolled
+                        ? 'text-gray-600 hover:text-primary hover:bg-primary/5'
+                        : 'text-white/80 hover:text-white hover:bg-white/10'
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
+
+          {/* Desktop CTA */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href={`tel:${phone}`}
+              className={`flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${
+                isScrolled ? 'text-gray-600 hover:text-primary' : 'text-white/80 hover:text-white'
+              }`}
+              id="navbar-phone"
             >
-              {link.name}
+              <FiPhone className="w-4 h-4" />
+              {phone}
             </a>
-          ))}
-        </div>
+            <Link
+              to="/packages"
+              className="bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-2.5 rounded-xl text-sm font-semibold hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5"
+              id="navbar-cta"
+            >
+              Book Now
+            </Link>
+          </div>
 
-        {/* Mobile Toggle */}
-        <button className="md:hidden text-emerald-900" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <X className={isScrolled ? 'text-black' : 'text-white'} /> : <Menu className={isScrolled ? 'text-black' : 'text-white'} />}
-        </button>
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className={`lg:hidden p-2.5 rounded-xl transition-all duration-300 ${
+              isScrolled
+                ? 'text-dark hover:bg-gray-100'
+                : 'text-white hover:bg-white/10'
+            }`}
+            id="mobile-menu-toggle"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg p-4 flex flex-col gap-4">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href || '#'}
-              className="text-gray-700 font-medium hover:text-emerald-900"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
-      )}
-    </nav>
-  );
-};
+      <div
+        className={`lg:hidden fixed inset-0 top-0 z-40 transition-all duration-500 ${
+          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        }`}
+        id="mobile-menu"
+      >
+        {/* Overlay */}
+        <div
+          className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+        {/* Panel */}
+        <div
+          className={`absolute top-0 right-0 w-80 max-w-[85vw] h-full bg-white shadow-2xl transform transition-transform duration-500 ${
+            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <div className="p-6">
+            {/* Close */}
+            <div className="flex justify-between items-center mb-8">
+              <div>
+                <h2 className="text-lg font-bold text-dark">Menu</h2>
+                <p className="text-xs text-gray-400">Navigate our pages</p>
+              </div>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 rounded-xl hover:bg-gray-100 transition-colors"
+                aria-label="Close menu"
+              >
+                <FiX className="w-5 h-5 text-gray-500" />
+              </button>
+            </div>
 
-export default Navbar;
+            {/* Links */}
+            <nav className="flex flex-col gap-2">
+              {navLinks.map((link, i) => (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  style={{ animationDelay: `${i * 0.08}s` }}
+                  className={({ isActive }) =>
+                    `px-4 py-3.5 rounded-xl text-base font-medium transition-all duration-300 animate-fade-left ${
+                      isActive
+                        ? 'bg-primary/10 text-primary border-l-4 border-primary'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-primary'
+                    }`
+                  }
+                >
+                  {link.label}
+                </NavLink>
+              ))}
+            </nav>
+
+            {/* Mobile CTA */}
+            <div className="mt-8 pt-6 border-t border-gray-100">
+              <a
+                href={`tel:${phone}`}
+                className="flex items-center gap-3 px-4 py-3 text-gray-600 hover:text-primary transition-colors"
+              >
+                <FiPhone className="w-5 h-5" />
+                <span className="font-medium">{phone}</span>
+              </a>
+              <Link
+                to="/packages"
+                className="mt-4 block text-center bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-3.5 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
+              >
+                Explore Packages
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}

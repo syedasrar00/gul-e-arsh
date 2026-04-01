@@ -1,147 +1,335 @@
 {
-  "company_info": {
-    "name": "Gul-e-Arsh Tour and Travels",
-    "phone": "+91 1234567890",
-    "email": "info@gulearshholidays.com",
-    "address": "Srinagar, Kashmir",
-    "tagline": "Experience the beauty of Kashmir with us!",
-    "location_desc": "Located at the heart of Srinagar, facing the beautiful Dal Lake.",
-    "coordinates": {
-      "lat": 34.0837,
-      "long": 74.7973
+  "company": {
+    "name": "Gul-e-Arsh Tour & Travels",
+    "tagline": "Where every journey begins with trust and ends with unforgettable memories.",
+    "description": "At Gul-e-Arsh Tour & Travels, we believe that travel is more than just visiting places — it's about creating unforgettable memories that last a lifetime. Based in the heart of Kashmir, we are a passionate team of travel experts dedicated to showcasing the breathtaking beauty of the Valley to the world. From snow-capped mountains to serene lakes, from lush green meadows to ancient Mughal gardens — we curate experiences that go beyond sightseeing. Every trip we design is crafted with care, ensuring comfort, safety, and an authentic connection with the culture and people of Kashmir.",
+    "mission": "Our mission is to provide exceptional travel services with honesty, reliability, and a personal touch. We strive to make Kashmir accessible to every traveler — whether it's a dream honeymoon, a thrilling adventure, or a peaceful family retreat. We are committed to sustainable tourism that respects local culture while delivering world-class hospitality.",
+    "stats": [
+      { "value": "2500+", "label": "Happy Travellers" },
+      { "value": "98%", "label": "Satisfaction Rate" },
+      { "value": "50+", "label": "Expert Guides" },
+      { "value": "100+", "label": "Curated Packages" }
+    ]
+  },
+  "contact": {
+    "phone": "+91 9876543210",
+    "email": "info@gulearshtravels.com",
+    "address": "Dal Gate, Boulevard Road, Srinagar, Kashmir 190001, India",
+    "socials": {
+      "instagram": "https://instagram.com/gulearshtravels",
+      "facebook": "https://facebook.com/gulearshtravels",
+      "whatsapp": "https://wa.me/919876543210"
     }
   },
-  "hero_section": {
-    "title": "Your gateway to the paradise Kashmir",
-    "subtitle": "Embark on an adventure of a lifetime.",
-    "cta_text": "Explore Now",
-    "image": "/assets/images/hero_bg.jpg"
-  },
-  "stats": [
+  "services": [
     {
-      "id": 1,
-      "name": "Satisfied Tourists Globally",
-      "count": 876,
-      "icon": "Users"
+      "title": "Customized Tour Packages",
+      "description": "Tailor-made itineraries designed around your preferences, budget, and schedule for a truly personal Kashmir experience.",
+      "icon": "package"
     },
     {
-      "id": 2,
-      "name": "Hotels Connected with Us",
-      "count": 384,
-      "icon": "Hotel"
+      "title": "Hotel & Houseboat Bookings",
+      "description": "From luxury houseboats on Dal Lake to cozy mountain resorts, we secure the best stays at the best prices.",
+      "icon": "hotel"
     },
     {
-      "id": 3,
-      "name": "Active Cabs in the Valley",
-      "count": 286,
-      "icon": "MapPin"
+      "title": "Honeymoon & Family Tours",
+      "description": "Romantic getaways and family-friendly adventures crafted to create memories that last forever.",
+      "icon": "heart"
+    },
+    {
+      "title": "Adventure & Trekking",
+      "description": "From the Great Lakes trek to skiing in Gulmarg, experience the adrenaline rush of Kashmir's wild landscapes.",
+      "icon": "mountain"
+    },
+    {
+      "title": "Local Sightseeing",
+      "description": "Discover hidden gems and iconic landmarks with our expert local guides who know every corner of the Valley.",
+      "icon": "compass"
+    },
+    {
+      "title": "Airport Transfers & Transport",
+      "description": "Comfortable, reliable transportation from the moment you land to the moment you depart. Stress-free travel guaranteed.",
+      "icon": "car"
     }
   ],
-  "destinations": [
+  "whyChooseUs": [
     {
-      "id": 1,
-      "name": "Gulmarg",
-      "image": "/assets/images/gulmarg_card.jpg",
-      "desc": "Experience the world's highest Gondola ride and ski slopes.",
-      "details": [
-        {
-          "title": "Day 1: Arrival",
-          "desc": "Check-in at the resort and evening walk.",
-          "image": "/assets/images/gulmarg_day1.jpg"
-        },
-        {
-          "title": "Day 2: Gondola Ride",
-          "desc": "Ride to Phase 1 and Phase 2 for snow activities.",
-          "image": "/assets/images/gulmarg_gondola.jpg"
-        }
-      ]
+      "title": "Local Expertise",
+      "description": "Born and raised in Kashmir, our team knows every hidden trail, secret viewpoint, and best-kept local secret.",
+      "icon": "map"
     },
     {
-      "id": 2,
-      "name": "Pahalgam",
-      "image": "/assets/images/pahalgam_card.jpg",
-      "desc": "The Valley of Shepherds, famous for its lush green meadows.",
-      "details": [
-        {
-          "title": "Attractions",
-          "desc": "Visit Betaab Valley and Aru Valley.",
-          "image": "/assets/images/betaab_valley.jpg"
-        }
-      ]
+      "title": "Affordable Pricing",
+      "description": "Premium experiences without the premium price tag. Transparent pricing with no hidden fees or surprises.",
+      "icon": "wallet"
     },
     {
-      "id": 3,
-      "name": "Pahalgam",
-      "image": "/assets/images/pahalgam_card.jpg",
-      "desc": "The Valley of Shepherds, famous for its lush green meadows.",
-      "details": [
-        {
-          "title": "Attractions",
-          "desc": "Visit Betaab Valley and Aru Valley.",
-          "image": "/assets/images/betaab_valley.jpg"
-        }
-      ]
+      "title": "24/7 Support",
+      "description": "Round-the-clock assistance throughout your trip. One call and we're there — anytime, anywhere in the Valley.",
+      "icon": "headset"
     },
     {
-      "id": 4,
-      "name": "Pahalgam",
-      "image": "/assets/images/pahalgam_card.jpg",
-      "desc": "The Valley of Shepherds, famous for its lush green meadows.",
-      "details": [
-        {
-          "title": "Attractions",
-          "desc": "Visit Betaab Valley and Aru Valley.",
-          "image": "/assets/images/betaab_valley.jpg"
-        }
-      ]
+      "title": "Professional Team",
+      "description": "Certified guides, experienced drivers, and dedicated trip managers ensure a seamless journey from start to finish.",
+      "icon": "users"
+    },
+    {
+      "title": "Safety First",
+      "description": "Your safety is our top priority. We follow strict safety protocols and maintain fully insured vehicles.",
+      "icon": "shield"
+    },
+    {
+      "title": "Sustainable Tourism",
+      "description": "We believe in responsible travel that preserves Kashmir's natural beauty for generations to come.",
+      "icon": "leaf"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Anjali Raghav",
+      "review": "I never thought a family trip could be this relaxing. The team handled everything perfectly — from airport pickup to hotel check-ins. The kids absolutely loved the pony rides in Pahalgam!",
+      "location": "Mumbai, India",
+      "rating": 5
+    },
+    {
+      "name": "Rishika Verma",
+      "review": "As a solo female traveler, I felt completely safe, supported, and welcomed. The 24/7 support gave me total peace of mind. Kashmir is magical and this team made it even better!",
+      "location": "Noida, India",
+      "rating": 5
+    },
+    {
+      "name": "Falak Imran",
+      "review": "From the first Shikara ride on Dal Lake to the snowy peaks of Gulmarg, every moment felt like a scene from a movie. The guides were incredibly knowledgeable and warm.",
+      "location": "New Delhi, India",
+      "rating": 5
+    },
+    {
+      "name": "Himanshu Mehta",
+      "review": "Walking through the meadows of Pahalgam felt like a dream. Thank you for showing us the hidden gems away from the tourist crowds. Will definitely come back!",
+      "location": "Bangalore, India",
+      "rating": 5
+    },
+    {
+      "name": "Priya & Karthik",
+      "review": "Our honeymoon in Kashmir was absolutely perfect! The houseboat stay, the Shikara ride at sunset, the snow in Gulmarg — everything was beautifully planned. A fairytale experience!",
+      "location": "Chennai, India",
+      "rating": 5
+    },
+    {
+      "name": "Lyana Thompson",
+      "review": "The guides' energy and local knowledge turned a simple trek into an unforgettable adventure. The Great Lakes Trek was the highlight of my trip to India!",
+      "location": "London, UK",
+      "rating": 5
     }
   ],
   "packages": [
     {
       "id": 1,
-      "name": "Kashmir Honeymoon Special",
-      "image": "/assets/images/honeymoon_card.jpg",
-      "desc": "6 Days of romantic bliss in the mountains.",
-
-      "details": [
-        {
-          "title": "Day 1: Srinagar Landing",
-          "desc": "Pickup from airport and Shikara ride.",
-          "image": "/assets/images/shikara.jpg"
-        },
-        {
-          "title": "Day 2: Houseboat Stay",
-          "desc": "Romantic dinner and stay in a luxury houseboat.",
-          "image": "/assets/images/houseboat.jpg"
-        }
-      ]
+      "title": "Kashmir Paradise Tour",
+      "location": "Srinagar, Gulmarg, Pahalgam",
+      "duration": "5 Nights / 6 Days",
+      "price": "₹25,000",
+      "priceValue": 25000,
+      "description": "Explore the mesmerizing beauty of Kashmir with this all-inclusive tour covering the three jewels of the Valley. From the iconic Dal Lake to the snow-capped peaks of Gulmarg, this package offers the perfect introduction to paradise on earth.",
+      "shortDescription": "Experience the best of Srinagar, Gulmarg, and Pahalgam in one unforgettable journey through the Valley.",
+      "image": "kashmir_paradise",
+      "highlights": [
+        "Shikara ride on Dal Lake at sunset",
+        "Gulmarg Gondola — world's highest cable car",
+        "Pahalgam valley exploration & pony rides",
+        "Visit to Mughal Gardens — Nishat, Shalimar & Chashme Shahi",
+        "Houseboat stay experience",
+        "Local Kashmiri cuisine tasting"
+      ],
+      "itinerary": [
+        { "day": 1, "title": "Arrival in Srinagar", "details": "Arrive at Srinagar Airport. Transfer to a traditional houseboat on Dal Lake. Evening Shikara ride watching the sunset paint the water golden. Overnight stay on houseboat." },
+        { "day": 2, "title": "Srinagar Mughal Gardens", "details": "Full day exploring the magnificent Mughal Gardens — Nishat Bagh (Garden of Pleasure), Shalimar Bagh (Abode of Love), and Chashme Shahi (Royal Spring). Visit the ancient Shankaracharya Temple for panoramic views. Evening free for local market exploration." },
+        { "day": 3, "title": "Srinagar to Gulmarg", "details": "Drive through pine forests to Gulmarg (Meadow of Flowers). Ride the famous Gulmarg Gondola to Phase 1 and Phase 2 for breathtaking mountain views. Optional skiing/snowboarding in winter. Overnight in Gulmarg hotel." },
+        { "day": 4, "title": "Gulmarg to Pahalgam", "details": "Scenic drive from Gulmarg to Pahalgam via saffron fields of Pampore. Arrive at the Valley of Shepherds. Explore Betaab Valley (Bollywood filming location) and Aru Valley. Overnight in Pahalgam." },
+        { "day": 5, "title": "Pahalgam Exploration", "details": "Full day in Pahalgam — pony ride to Baisaran (Mini Switzerland), visit Chandanwari, and explore the pristine Lidder River. Optional trek to Tarsar Lake viewpoint. Evening bonfire and BBQ dinner." },
+        { "day": 6, "title": "Departure", "details": "Leisurely morning breakfast. Transfer back to Srinagar Airport for departure with beautiful memories and a promise to return." }
+      ],
+      "inclusions": ["Airport transfers", "Accommodation (3-star)", "Daily breakfast", "Sightseeing as per itinerary", "Shikara ride", "All taxes"],
+      "category": "popular"
     },
     {
       "id": 2,
-      "name": "Winter Wonderland",
-      "image": "/assets/images/winter_card.jpg",
-      "desc": "A complete snow experience for families.",
-      "details": [
-        {
-          "title": "Day 1: Snow Park",
-          "desc": "Fun activities in the snow park.",
-          "image": "/assets/images/snow_park.jpg"
-        }
-      ]
+      "title": "Royal Kashmir Honeymoon",
+      "location": "Srinagar, Gulmarg, Pahalgam, Sonmarg",
+      "duration": "6 Nights / 7 Days",
+      "price": "₹35,000",
+      "priceValue": 35000,
+      "description": "A romantic escape designed for couples, featuring luxury houseboat stays, candlelit dinners by the lake, private Shikara rides, and the most romantic spots in the Valley. Create memories that will last a lifetime.",
+      "shortDescription": "A dreamy honeymoon experience featuring luxury stays, romantic Shikara rides, and snow-capped mountain views.",
+      "image": "honeymoon_kashmir",
+      "highlights": [
+        "Private sunset Shikara ride for couples",
+        "Luxury houseboat with candlelit dinner",
+        "Gulmarg Gondola ride with mountain views",
+        "Sonmarg — Meadow of Gold exploration",
+        "Betaab Valley private picnic",
+        "Complimentary couple spa session"
+      ],
+      "itinerary": [
+        { "day": 1, "title": "Welcome to Paradise", "details": "Arrive at Srinagar Airport. VIP transfer to luxury houseboat on Dal Lake. Welcome drink and flower decoration. Private sunset Shikara ride with Kashmiri Kahwa. Candlelit dinner on the houseboat." },
+        { "day": 2, "title": "Romantic Srinagar", "details": "Visit the beautiful Mughal Gardens. Private photography session at Pari Mahal (Palace of Fairies). Evening visit to the floating vegetable market on Dal Lake. Spa session at the hotel." },
+        { "day": 3, "title": "Enchanting Gulmarg", "details": "Drive to Gulmarg through scenic pine forests. Ride the Gondola to snow-covered peaks. Horse ride through the meadows. Cozy evening at the mountain resort with bonfire." },
+        { "day": 4, "title": "Gulmarg to Pahalgam", "details": "Scenic drive to Pahalgam through the countryside. Check into riverside resort. Private picnic at Betaab Valley. Walk along the Lidder River at sunset." },
+        { "day": 5, "title": "Pahalgam Romance", "details": "Pony ride to Baisaran (Mini Switzerland). Visit Aru Valley with packed gourmet lunch. Evening cultural program with Kashmiri music and dance." },
+        { "day": 6, "title": "Golden Sonmarg", "details": "Day trip to Sonmarg — the Meadow of Gold. Visit Thajiwas Glacier. Snow activities and photography. Return to Srinagar for farewell dinner at a premium restaurant." },
+        { "day": 7, "title": "Fond Farewell", "details": "Leisurely breakfast. Shopping for Kashmiri handicrafts. Transfer to airport with a photo album of your memories." }
+      ],
+      "inclusions": ["VIP airport transfers", "Luxury accommodation", "All meals (MAP plan)", "Private Shikara ride", "Couple spa session", "All taxes & permits"],
+      "category": "honeymoon"
+    },
+    {
+      "id": 3,
+      "title": "Kashmir Great Lakes Trek",
+      "location": "Sonamarg, Alpine Lakes, Naranag",
+      "duration": "7 Nights / 8 Days",
+      "price": "₹18,000",
+      "priceValue": 18000,
+      "description": "Embark on one of India's most stunning treks — the Kashmir Great Lakes Trek. Traverse rugged mountain passes and witness seven turquoise alpine lakes surrounded by untouched meadows and snow-capped peaks.",
+      "shortDescription": "Trek through seven pristine alpine lakes surrounded by snow-capped peaks — India's most beautiful trek.",
+      "image": "great_lakes_trek",
+      "highlights": [
+        "Seven turquoise alpine lakes",
+        "Mountain passes above 12,000 ft",
+        "Pristine meadows and wildflower fields",
+        "Camping under star-filled skies",
+        "Expert mountain guide accompaniment",
+        "All camping gear and meals provided"
+      ],
+      "itinerary": [
+        { "day": 1, "title": "Arrival & Acclimatization", "details": "Arrive in Srinagar. Transfer to Sonamarg. Briefing and gear check. Short acclimatization walk. Overnight in base camp." },
+        { "day": 2, "title": "Sonamarg to Nichnai", "details": "Trek from Sonamarg to Nichnai campsite (8 km). Gradual ascent through pine forests. Set up camp near the river. Evening bonfire." },
+        { "day": 3, "title": "Nichnai to Vishansar Lake", "details": "Cross Nichnai Pass (13,500 ft). Descend to the stunning turquoise Vishansar Lake. Camp by the lakeshore with panoramic mountain views." },
+        { "day": 4, "title": "Vishansar to Gadsar Lake", "details": "Trek past Kishansar Lake. Cross Gadsar Pass (13,750 ft) — the highest point. Descend to Gadsar Lake surrounded by wildflower meadows." },
+        { "day": 5, "title": "Gadsar to Satsar Lakes", "details": "Trek to the cluster of seven mountain lakes called Satsar. Camp in one of the most remote and beautiful spots in the Himalayas." },
+        { "day": 6, "title": "Satsar to Gangabal Lake", "details": "Descend through meadows to the twin lakes of Gangabal and Nundkol. Stunning views of Mount Harmukh. Camp by the lake." },
+        { "day": 7, "title": "Gangabal to Naranag", "details": "Final descent from Gangabal to Naranag through forests. Visit ancient Naranag Temple. Transfer back to Srinagar." },
+        { "day": 8, "title": "Departure", "details": "Morning at leisure in Srinagar. Transfer to airport for departure." }
+      ],
+      "inclusions": ["Trek guide & support staff", "Camping equipment", "All meals during trek", "Permits & forest fees", "First aid kit", "Srinagar transfers"],
+      "category": "adventure"
+    },
+    {
+      "id": 4,
+      "title": "Classic Family Retreat",
+      "location": "Srinagar, Gulmarg, Pahalgam",
+      "duration": "5 Nights / 6 Days",
+      "price": "₹22,000",
+      "priceValue": 22000,
+      "description": "An easy-paced, family-friendly tour designed to let every family member — from grandparents to toddlers — enjoy the beauty of Kashmir stress-free. Comfortable stays, kid-friendly activities, and zero hassle.",
+      "shortDescription": "A relaxed, family-friendly Kashmir tour with comfortable stays, pony rides, and zero-hassle sightseeing.",
+      "image": "family_retreat",
+      "highlights": [
+        "Comfortable family-friendly accommodation",
+        "Pony rides for kids in Pahalgam",
+        "Shikara ride suitable for all ages",
+        "Easy-paced sightseeing schedule",
+        "Private vehicle throughout",
+        "Special kids' activities included"
+      ],
+      "itinerary": [
+        { "day": 1, "title": "Family Welcome", "details": "Arrive at Srinagar Airport. Spacious family vehicle transfer to hotel. Evening Shikara ride on Dal Lake — kids will love spotting the kingfishers! Welcome dinner with Kashmiri Wazwan." },
+        { "day": 2, "title": "Garden Day", "details": "Visit Mughal Gardens at a relaxed pace. Tulip Garden visit (seasonal). Interactive craft workshop for kids. Evening free for family time at hotel." },
+        { "day": 3, "title": "Snow Day in Gulmarg", "details": "Drive to Gulmarg. Gondola ride (Phase 1 — suitable for families). Snow play activities for kids. Horse riding through the meadows. Overnight in family suite." },
+        { "day": 4, "title": "Pahalgam Adventures", "details": "Travel to Pahalgam. Pony rides for the whole family. Visit Betaab Valley for a family picnic. River-side walk along the Lidder. Evening games and bonfire." },
+        { "day": 5, "title": "Pahalgam & Back", "details": "Morning visit to Aru Valley. Return to Srinagar. Shopping for souvenirs — papier-mâché, pashmina shawls. Farewell dinner cruise on Dal Lake." },
+        { "day": 6, "title": "Happy Goodbye", "details": "Breakfast with scenic views. Transfer to Srinagar Airport with gifts and memories galore." }
+      ],
+      "inclusions": ["Family vehicle transfers", "Family rooms/suites", "Daily breakfast & dinner", "All sightseeing", "Kids' activity kit", "All taxes"],
+      "category": "family"
+    },
+    {
+      "id": 5,
+      "title": "Winter Wonderland Gulmarg",
+      "location": "Gulmarg, Srinagar",
+      "duration": "4 Nights / 5 Days",
+      "price": "₹28,000",
+      "priceValue": 28000,
+      "description": "Experience Gulmarg at its most magical — blanketed in pristine white snow. This winter-exclusive package includes skiing lessons, snowboarding, igloo building, and the thrill of riding the world's highest cable car above the clouds.",
+      "shortDescription": "Ski, snowboard, and build igloos in the world's highest ski resort — Gulmarg's winter magic awaits.",
+      "image": "winter_gulmarg",
+      "highlights": [
+        "Skiing & snowboarding lessons",
+        "Gulmarg Gondola in winter",
+        "Snow trekking to frozen Alpather Lake",
+        "Igloo building experience",
+        "Stay in heated mountain lodge",
+        "Hot Kashmiri Kahwa by the fireplace"
+      ],
+      "itinerary": [
+        { "day": 1, "title": "Arrival in Winter Paradise", "details": "Arrive at Srinagar Airport. Drive through snow-covered landscapes to Gulmarg. Check into heated mountain lodge. Evening snowfall viewing with hot Kahwa. Welcome dinner." },
+        { "day": 2, "title": "Ski & Snowboard Day", "details": "Full day of skiing/snowboarding at the Gulmarg Ski Resort. Professional instructor for beginners. Equipment provided. Lunch at the slope-side café. Evening relaxation at lodge." },
+        { "day": 3, "title": "Gondola & Snow Trek", "details": "Ride the Gulmarg Gondola to Phase 2 (13,780 ft). Snow trek towards Alpather Lake. Photography session with Himalayan backdrop. Igloo building workshop. Evening bonfire with music." },
+        { "day": 4, "title": "Srinagar Winter Charm", "details": "Drive back to Srinagar. Winter Shikara ride on Dal Lake. Visit the snow-dusted Mughal Gardens. Shopping for winter Pashmina. Farewell dinner at traditional Kashmiri restaurant." },
+        { "day": 5, "title": "Departure", "details": "Breakfast with mountain views. Transfer to Srinagar Airport." }
+      ],
+      "inclusions": ["Airport transfers", "Heated accommodation", "Daily breakfast & dinner", "Ski/snowboard equipment", "Professional instructor", "All taxes & permits"],
+      "category": "adventure"
+    },
+    {
+      "id": 6,
+      "title": "The Ultimate Kashmir Experience",
+      "location": "Srinagar, Gulmarg, Pahalgam, Sonmarg, Yusmarg",
+      "duration": "8 Nights / 9 Days",
+      "price": "₹45,000",
+      "priceValue": 45000,
+      "description": "The definitive Kashmir experience covering every iconic destination and hidden gem. From the gardens of Srinagar to the glaciers of Sonmarg, from the meadows of Yusmarg to the valleys of Pahalgam — this is Kashmir in its entirety.",
+      "shortDescription": "The complete Kashmir journey — every iconic destination and hidden gem in one grand tour.",
+      "image": "ultimate_kashmir",
+      "highlights": [
+        "All five major Kashmir destinations",
+        "Luxury accommodation throughout",
+        "Private vehicle & dedicated guide",
+        "All major attractions covered",
+        "Off-the-beaten-path experiences",
+        "Cultural immersion activities"
+      ],
+      "itinerary": [
+        { "day": 1, "title": "Grand Arrival", "details": "VIP pickup from Srinagar Airport. Check into luxury hotel. Evening Shikara ride on Dal Lake. Welcome Wazwan dinner." },
+        { "day": 2, "title": "Srinagar Heritage", "details": "Full day exploring Srinagar — Mughal Gardens, Hazratbal Shrine, Jama Masjid, and the old city's craft workshops. Evening floating market visit." },
+        { "day": 3, "title": "Enchanting Gulmarg", "details": "Drive to Gulmarg. Full Gondola experience. Meadow walks and ATV rides. Overnight in mountain resort." },
+        { "day": 4, "title": "Gulmarg to Pahalgam", "details": "Scenic drive via Srinagar to Pahalgam. Stop at saffron fields of Pampore. Evening at Betaab Valley." },
+        { "day": 5, "title": "Pahalgam Valleys", "details": "Explore Aru Valley, Baisaran, and Chandanwari. Pony rides and river-side activities. Cultural evening program." },
+        { "day": 6, "title": "Hidden Yusmarg", "details": "Day trip to the untouched meadows of Yusmarg. Picnic by the Doodhganga River. Horse riding through wildflower fields. Return to Srinagar." },
+        { "day": 7, "title": "Golden Sonmarg", "details": "Drive to Sonmarg — Meadow of Gold. Visit Thajiwas Glacier. Zero Point excursion. Snow activities. Return to Srinagar." },
+        { "day": 8, "title": "Doodhpathri Discovery", "details": "Day trip to the Valley of Milk — Doodhpathri. Pristine meadows and gushing streams. Leisure time. Farewell gala dinner." },
+        { "day": 9, "title": "Farewell", "details": "Morning shopping for Kashmiri treasures. Transfer to airport with a heart full of memories." }
+      ],
+      "inclusions": ["VIP airport transfers", "Premium accommodation", "All meals included", "Private vehicle & guide", "All entry fees", "All taxes & permits"],
+      "category": "popular"
     }
   ],
-  "team": [
+  "gallery": [
+    { "title": "Dal Lake Sunset", "location": "Srinagar" },
+    { "title": "Gulmarg Snow Peaks", "location": "Gulmarg" },
+    { "title": "Pahalgam Valley", "location": "Pahalgam" },
+    { "title": "Sonmarg Meadows", "location": "Sonmarg" }
+  ],
+  "faqs": [
     {
-      "id": 1,
-      "name": "Sahil Gulzar Bhat",
-      "role": "Founder & CEO",
-      "image": "/assets/images/team1.jpg"
+      "question": "Is it safe to travel to Kashmir?",
+      "answer": "Yes! Kashmir has seen a significant boost in tourism in recent years and is perfectly safe for travelers. Our team provides 24/7 on-ground support to ensure your complete safety and comfort throughout your trip."
     },
     {
-      "id": 2,
-      "name": "Syed Arsalan Zahoor",
-      "role": "Travel Consultant",
-      "image": "/assets/images/team2.jpg"
+      "question": "What is the best time to visit Kashmir?",
+      "answer": "Kashmir is beautiful year-round! March–May for tulips and spring blooms, June–August for pleasant summer weather, September–November for stunning autumn colors, and December–February for magical snowfall and skiing."
+    },
+    {
+      "question": "Can I customize the tour packages?",
+      "answer": "Absolutely! All our packages are fully customizable. Tell us your preferences, budget, and dates, and we'll create a tailor-made itinerary just for you."
+    },
+    {
+      "question": "What should I pack for a Kashmir trip?",
+      "answer": "Pack layers! Even in summer, evenings can be cool. In winter, bring heavy woolens, thermals, snow boots, and gloves. We provide a detailed packing list after booking."
+    },
+    {
+      "question": "Do you provide airport pickup and drop?",
+      "answer": "Yes, all our packages include complimentary airport pickup and drop-off at Srinagar Airport (SXR). Our driver will be waiting for you at the arrivals gate."
     }
   ]
 }
