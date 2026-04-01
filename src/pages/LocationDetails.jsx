@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import {
   getLocationById,
   getPackageById,
@@ -18,6 +19,18 @@ export default function LocationDetails() {
   const { id } = useParams();
   const location = getLocationById(id);
   const phone = getPhone();
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  useEffect(() => {
+    if (selectedItem) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedItem]);
 
   if (!location) {
     return (
@@ -47,7 +60,7 @@ export default function LocationDetails() {
     <>
       {/* ── Hero ── */}
       <section
-        className="relative h-[60vh] min-h-[420px] overflow-hidden"
+        className="relative h-[60vh] min-h-105 overflow-hidden"
         id="location-detail-hero"
       >
         <img
@@ -137,7 +150,7 @@ export default function LocationDetails() {
                       key={i}
                       className="flex items-center gap-3 p-3 bg-primary/5 rounded-xl"
                     >
-                      <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                      <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
                         <FiCheck className="w-3.5 h-3.5 text-white" />
                       </div>
                       <span className="text-dark text-sm font-medium">{h}</span>
@@ -156,11 +169,11 @@ export default function LocationDetails() {
                     {location.whatToSee.map((item, i) => (
                       <div
                         key={i}
-                        className="group rounded-2xl overflow-hidden border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/8 transition-all duration-300"
+                        className="group rounded-2xl overflow-hidden border border-gray-100 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/8 hover:scale-105 transition-all duration-300"
                       >
                         {/* Image */}
                         {item.image && (
-                          <div className="relative h-36 overflow-hidden">
+                          <div className="relative h-36 overflow-hidden cursor-pointer" onClick={() => setSelectedItem(item)}>
                             <img
                               src={item.image}
                               alt={item.title}
@@ -235,7 +248,7 @@ export default function LocationDetails() {
                       <Link
                         key={pkg.id}
                         to={`/package/${pkg.id}`}
-                        className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-400 hover:-translate-y-1"
+                        className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-primary/10 hover:scale-105 transition-all duration-400 hover:-translate-y-1"
                       >
                         <div className="relative h-36 overflow-hidden">
                           <img
@@ -342,6 +355,31 @@ export default function LocationDetails() {
           </div>
         </div>
       </section>
+
+      {/* Modal for What to See & Do images */}
+      {selectedItem && (
+        <div className="fixed inset-0 backdrop-blur-md flex items-center justify-center z-999 p-4" onClick={() => setSelectedItem(null)}>
+          <div className="relative w-[90vw] h-auto max-w-162.5 max-h-[90vh] bg-transparent rounded-lg sm:rounded-lg overflow-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="relative w-full h-full overflow-y-auto">
+              <img
+                src={selectedItem.image}
+                alt={selectedItem.title}
+                className="w-full h-auto"
+              />
+              <div className="z-999 absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black to-transparent text-white overflow-hidden">
+                <h3 className="text-xl font-bold mb-2">{selectedItem.title}</h3>
+                <p className="text-sm">{selectedItem.description}</p>
+              </div>
+            </div>
+            <button
+              onClick={() => setSelectedItem(null)}
+              className="absolute top-2 right-2 text-white text-2xl bg-transparent rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-75 transition-colors z-10"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
@@ -349,7 +387,7 @@ export default function LocationDetails() {
 function InfoRow({ label, value, icon }) {
   return (
     <div className="flex items-start gap-3">
-      <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 text-primary text-sm">
+      <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 text-primary text-sm">
         {icon}
       </div>
       <div>
