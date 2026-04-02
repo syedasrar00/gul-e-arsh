@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { getContactInfo, getCompanyName } from '../services/dataService';
+import { getContactInfo } from '../services/dataService';
 import { useScrollAnimation } from '../hooks/useUtils';
 import {
   FiPhone, FiMail, FiMapPin, FiSend, FiCheck, FiInstagram, FiFacebook, FiClock,
@@ -8,7 +8,6 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Contact() {
   const contact = getContactInfo();
-  const companyName = getCompanyName();
   const [ref, isVisible] = useScrollAnimation();
   const [formState, setFormState] = useState({
     name: '',
@@ -71,7 +70,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
             {/* Contact Info */}
-            <ContactInfo contact={contact} companyName={companyName} />
+            <ContactInfo contact={contact} />
 
             {/* Contact Form */}
             <div className="lg:col-span-3">
@@ -100,7 +99,7 @@ export default function Contact() {
   );
 }
 
-function ContactInfo({ contact, companyName }) {
+function ContactInfo({ contact }) {
   const [ref, isVisible] = useScrollAnimation();
 
   const contactItems = [

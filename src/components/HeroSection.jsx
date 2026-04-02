@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
-import { getCompanyName, getCompanyTagline, getSiteImages } from '../services/dataService';
+import { getCompanyTagline, getSiteImages } from '../services/dataService';
 import { useScrollAnimation } from '../hooks/useUtils';
 import { FiArrowRight, FiPlay } from 'react-icons/fi';
 
 export default function HeroSection() {
-  const companyName = getCompanyName();
   const tagline = getCompanyTagline();
   const siteImages = getSiteImages();
   const [ref, isVisible] = useScrollAnimation();

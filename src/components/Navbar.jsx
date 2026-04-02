@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { getCompanyName, getPhone } from '../services/dataService';
 import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
 
@@ -14,7 +14,6 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
   const companyName = getCompanyName();
   const phone = getPhone();
 
@@ -25,10 +24,6 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [location.pathname]);
 
   // Disable body scroll when mobile menu is open
   useEffect(() => {
@@ -176,6 +171,7 @@ export default function Navbar() {
                 <NavLink
                   key={link.to}
                   to={link.to}
+                  onClick={() => setIsMobileMenuOpen(false)}
                   style={{ animationDelay: `${i * 0.08}s` }}
                   className={({ isActive }) =>
                     `px-4 py-3.5 rounded-xl text-base font-medium transition-all duration-300 animate-fade-left ${
@@ -201,6 +197,7 @@ export default function Navbar() {
               </a>
               <Link
                 to="/packages"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-4 block text-center bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-3.5 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
               >
                 Explore Packages
