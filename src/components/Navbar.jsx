@@ -18,6 +18,7 @@ export default function Navbar() {
   const phone = getPhone();
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
